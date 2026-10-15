@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" width="980" height="640" font-family="Helvetica, Arial, sans-serif">
+  <rect width="980" height="640" fill="#ffffff"/>
+  <defs>
+    <marker id="f" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#1f5f8b"/>
+    </marker>
+    <marker id="g" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#8a9aa8"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#16222e">Figura 3 · Arquitectura Laravel inicial y ciclo de una petición</text>
+  <text x="490" y="52" text-anchor="middle" font-size="12" fill="#5b6b78">Ejemplo: POST /proyectos/7/presupuesto</text>
+
+  <!-- CLIENTE -->
+  <rect x="30" y="86" width="150" height="56" rx="6" fill="#f7fafc" stroke="#5b6b78" stroke-width="1.6"/>
+  <text x="105" y="108" text-anchor="middle" font-size="12" font-weight="bold" fill="#16222e">NAVEGADOR</text>
+  <text x="105" y="124" text-anchor="middle" font-size="9" fill="#5b6b78">lado cliente · JS visible</text>
+  <text x="105" y="136" text-anchor="middle" font-size="9" fill="#b3261e">y manipulable</text>
+
+  <line x1="180" y1="114" x2="222" y2="114" stroke="#1f5f8b" stroke-width="2" marker-end="url(#f)"/>
+  <text x="201" y="107" text-anchor="middle" font-size="8.5" fill="#1f5f8b">HTTP</text>
+
+  <!-- SERVIDOR -->
+  <rect x="225" y="72" width="725" height="420" rx="8" fill="#f4f9fc" stroke="#1f5f8b" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <text x="240" y="90" font-size="11" font-weight="bold" fill="#1f5f8b">SERVIDOR · aquí se ejecuta PHP y aquí se decide todo</text>
+
+  <!-- 1 entrada -->
+  <rect x="245" y="100" width="150" height="48" rx="4" fill="#fff" stroke="#9ec7e2" stroke-width="1.5"/>
+  <text x="320" y="118" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">public/index.php</text>
+  <text x="320" y="132" text-anchor="middle" font-size="8.5" fill="#5b6b78">único punto de entrada</text>
+  <text x="320" y="143" text-anchor="middle" font-size="8.5" fill="#5b6b78">+ middleware</text>
+
+  <line x1="395" y1="124" x2="425" y2="124" stroke="#1f5f8b" stroke-width="1.8" marker-end="url(#f)"/>
+
+  <!-- 2 routes -->
+  <rect x="428" y="100" width="150" height="48" rx="4" fill="#fff" stroke="#9ec7e2" stroke-width="1.5"/>
+  <text x="503" y="118" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">routes/web.php</text>
+  <text x="503" y="132" text-anchor="middle" font-size="8.5" fill="#5b6b78">asocia URL + método</text>
+  <text x="503" y="143" text-anchor="middle" font-size="8.5" fill="#5b6b78">con una acción · sin lógica</text>
+
+  <line x1="578" y1="124" x2="608" y2="124" stroke="#1f5f8b" stroke-width="1.8" marker-end="url(#f)"/>
+
+  <!-- 3 controller -->
+  <rect x="611" y="100" width="160" height="48" rx="4" fill="#fff" stroke="#9ec7e2" stroke-width="1.5"/>
+  <text x="691" y="118" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">PresupuestoController</text>
+  <text x="691" y="132" text-anchor="middle" font-size="8.5" fill="#5b6b78">valida entrada, comprueba</text>
+  <text x="691" y="143" text-anchor="middle" font-size="8.5" fill="#5b6b78">permisos y DELEGA · fino</text>
+
+  <rect x="800" y="100" width="130" height="48" rx="4" fill="#fff" stroke="#9ec7e2" stroke-width="1.5"/>
+  <text x="865" y="118" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">Policies</text>
+  <text x="865" y="134" text-anchor="middle" font-size="8.5" fill="#5b6b78">¿puede este usuario?</text>
+  <line x1="771" y1="124" x2="797" y2="124" stroke="#8a9aa8" stroke-width="1.4" marker-end="url(#g)"/>
+
+  <line x1="691" y1="148" x2="691" y2="180" stroke="#1f5f8b" stroke-width="1.8" marker-end="url(#f)"/>
+
+  <!-- SERVICES: el corazon -->
+  <rect x="380" y="183" width="470" height="118" rx="6" fill="#edf7f1" stroke="#1b6b43" stroke-width="2"/>
+  <text x="615" y="204" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1b6b43">Services — la lógica de negocio</text>
+  <text x="615" y="219" text-anchor="middle" font-size="9" fill="#1b6b43">Aquí es donde «la aplicación decide». Reutilizable y comprobable por separado.</text>
+
+  <rect x="396" y="228" width="140" height="58" rx="4" fill="#fff" stroke="#1b6b43"/>
+  <text x="466" y="246" text-anchor="middle" font-size="10" font-weight="bold" fill="#16222e">CalculadoraPrecios</text>
+  <text x="466" y="260" text-anchor="middle" font-size="8.5" fill="#5b6b78">subtotal, impuestos,</text>
+  <text x="466" y="271" text-anchor="middle" font-size="8.5" fill="#5b6b78">total mensual y único</text>
+  <text x="466" y="282" text-anchor="middle" font-size="8" fill="#1b6b43">nunca en el navegador</text>
+
+  <rect x="546" y="228" width="140" height="58" rx="4" fill="#fff" stroke="#1b6b43"/>
+  <text x="616" y="246" text-anchor="middle" font-size="10" font-weight="bold" fill="#16222e">ValidadorArquitectura</text>
+  <text x="616" y="260" text-anchor="middle" font-size="8.5" fill="#5b6b78">¿cumple los requerimientos</text>
+  <text x="616" y="271" text-anchor="middle" font-size="8.5" fill="#5b6b78">obligatorios?</text>
+  <text x="616" y="282" text-anchor="middle" font-size="8" fill="#1b6b43">aquí decide Laravel</text>
+
+  <rect x="696" y="228" width="140" height="58" rx="4" fill="#fff8e6" stroke="#e0a800"/>
+  <text x="766" y="246" text-anchor="middle" font-size="10" font-weight="bold" fill="#16222e">RecomendadorIA</text>
+  <text x="766" y="260" text-anchor="middle" font-size="8.5" fill="#8a6d00">llama al proveedor y</text>
+  <text x="766" y="271" text-anchor="middle" font-size="8.5" fill="#8a6d00">filtra lo inexistente</text>
+  <text x="766" y="282" text-anchor="middle" font-size="8" fill="#8a6d00">solo propone</text>
+
+  <line x1="696" y1="257" x2="690" y2="257" stroke="#e0a800" stroke-width="1.6" marker-end="url(#g)"/>
+
+  <!-- MODELS -->
+  <line x1="466" y1="301" x2="466" y2="330" stroke="#1f5f8b" stroke-width="1.8" marker-end="url(#f)"/>
+  <rect x="380" y="333" width="180" height="50" rx="4" fill="#fff" stroke="#9ec7e2" stroke-width="1.5"/>
+  <text x="470" y="352" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">Models (Eloquent)</text>
+  <text x="470" y="366" text-anchor="middle" font-size="8.5" fill="#5b6b78">Producto · Proyecto · Presupuesto</text>
+  <text x="470" y="377" text-anchor="middle" font-size="8.5" fill="#5b6b78">Pedido · Recurso</text>
+
+  <rect x="580" y="333" width="130" height="50" rx="4" fill="#fff" stroke="#9ec7e2" stroke-width="1.5"/>
+  <text x="645" y="352" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">Enums</text>
+  <text x="645" y="366" text-anchor="middle" font-size="8.5" fill="#5b6b78">EstadoPedido</text>
+  <text x="645" y="377" text-anchor="middle" font-size="8.5" fill="#5b6b78">TipoProducto · Periodicidad</text>
+
+  <rect x="730" y="333" width="130" height="50" rx="4" fill="#f7fafc" stroke="#5b6b78" stroke-width="1.5"/>
+  <text x="795" y="352" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">Auditoría</text>
+  <text x="795" y="368" text-anchor="middle" font-size="8.5" fill="#5b6b78">se escribe desde el servicio</text>
+
+  <line x1="560" y1="358" x2="577" y2="358" stroke="#8a9aa8" stroke-width="1.2" marker-end="url(#g)"/>
+  <line x1="686" y1="286" x2="780" y2="330" stroke="#8a9aa8" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#g)"/>
+
+  <!-- BD -->
+  <line x1="470" y1="383" x2="470" y2="408" stroke="#1f5f8b" stroke-width="1.8" marker-end="url(#f)"/>
+  <rect x="380" y="411" width="180" height="42" rx="4" fill="#eef4f9" stroke="#1f5f8b" stroke-width="1.5"/>
+  <text x="470" y="430" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">MariaDB</text>
+  <text x="470" y="444" text-anchor="middle" font-size="8.5" fill="#5b6b78">base de datos de desarrollo</text>
+
+  <!-- RESPUESTA -->
+  <rect x="245" y="183" width="110" height="118" rx="4" fill="#fff" stroke="#9ec7e2" stroke-width="1.5"/>
+  <text x="300" y="218" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">Vista Blade</text>
+  <text x="300" y="234" text-anchor="middle" font-size="8.5" fill="#5b6b78">o Resource</text>
+  <text x="300" y="248" text-anchor="middle" font-size="8.5" fill="#5b6b78">(JSON para API)</text>
+  <text x="300" y="268" text-anchor="middle" font-size="8.5" fill="#5b6b78">genera el HTML</text>
+  <text x="300" y="280" text-anchor="middle" font-size="8.5" fill="#5b6b78">sin exponer datos</text>
+  <text x="300" y="292" text-anchor="middle" font-size="8.5" fill="#5b6b78">internos</text>
+  <line x1="378" y1="242" x2="358" y2="242" stroke="#1f5f8b" stroke-width="1.8" marker-end="url(#f)"/>
+
+  <path d="M 262 183 L 262 160 L 105 160 L 105 145" fill="none" stroke="#1f5f8b" stroke-width="2" marker-end="url(#f)"/>
+  <text x="178" y="155" text-anchor="middle" font-size="8.5" fill="#1f5f8b">respuesta HTTP + HTML</text>
+
+  <!-- NOTA CLAVE -->
+  <rect x="30" y="506" width="920" height="60" rx="6" fill="#fff8e6" stroke="#e0a800" stroke-width="1.6"/>
+  <text x="48" y="530" font-size="11.5" font-weight="bold" fill="#16222e">Por qué el cálculo del precio está en Services y no en el navegador</text>
+  <text x="48" y="546" font-size="9.5" fill="#16222e">El JavaScript del navegador lo ejecuta el usuario en su máquina y puede modificarlo. PHP se ejecuta en el servidor, donde el usuario no llega.</text>
+  <text x="48" y="558" font-size="9.5" fill="#16222e">Por eso el servidor nunca acepta un importe enviado desde el cliente: siempre lo recalcula (RNF-02, RN-06).</text>
+
+  <!-- leyenda -->
+  <rect x="30" y="574" width="920" height="56" rx="6" fill="#f7fafc" stroke="#c9d8e3"/>
+  <text x="48" y="594" font-size="10.5" font-weight="bold" fill="#1f5f8b">Leyenda</text>
+  <rect x="48" y="602" width="14" height="11" rx="2" fill="#edf7f1" stroke="#1b6b43"/>
+  <text x="70" y="611" font-size="9.5" fill="#16222e">Lógica de negocio: aquí decide la aplicación</text>
+  <rect x="330" y="602" width="14" height="11" rx="2" fill="#fff8e6" stroke="#e0a800"/>
+  <text x="352" y="611" font-size="9.5" fill="#16222e">Interviene la IA: solo propone, nunca decide</text>
+  <rect x="640" y="602" width="14" height="11" rx="2" fill="#fff" stroke="#9ec7e2"/>
+  <text x="662" y="611" font-size="9.5" fill="#16222e">Componente de Laravel</text>
+  <text x="830" y="611" font-size="9" fill="#5b6b78" font-style="italic">BORRADOR</text>
+</svg>
