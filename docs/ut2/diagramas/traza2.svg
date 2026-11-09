@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="540" fill="#ffffff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f5f8b"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b3261e"/></marker>
+    <marker id="av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1b6b43"/></marker>
+  </defs>
+  <text x="500" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#16222e">Figura 3 · Traza 2 — escritura con validación (POST)</text>
+  <text x="500" y="47" text-anchor="middle" font-size="11" fill="#5b6b78">POST /proyectos/1/requerimientos — alta de un requisito, con éxito y con error</text>
+
+  <rect x="320" y="70" width="360" height="46" rx="5" fill="#ffffff" stroke="#16222e" stroke-width="2"/>
+  <text x="500" y="88" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#16222e">1 · Formulario enviado por POST con @csrf</text>
+  <text x="500" y="106" text-anchor="middle" font-size="8.5" fill="#5b6b78">clave, operador, valor, obligatorio, origen</text>
+
+  <line x1="500" y1="116" x2="500" y2="136" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="320" y="138" width="360" height="42" rx="5" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="500" y="156" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1f5f8b">2 · Route y Controller</text>
+  <text x="500" y="172" text-anchor="middle" font-size="8.5" fill="#5b6b78">requerimientos.store va a RequerimientoController::store</text>
+
+  <line x1="500" y1="180" x2="500" y2="200" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="280" y="202" width="440" height="78" rx="5" fill="#fff6d8" stroke="#d79b00" stroke-width="2"/>
+  <text x="500" y="221" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#8a6d00">3 · GuardarRequerimientoRequest</text>
+  <text x="500" y="238" text-anchor="middle" font-size="8.3" fill="#6b5500">reglas básicas: clave admitida, operador conocido, valor obligatorio</text>
+  <text x="500" y="253" text-anchor="middle" font-size="8.3" fill="#6b5500">withValidator: la clave fija el tipo y el tipo decide qué operadores valen</text>
+  <text x="500" y="270" text-anchor="middle" font-size="8.3" fill="#6b5500">el tipo NO lo manda el formulario: lo deduce el servidor</text>
+
+  <path d="M 350 280 L 220 280 L 220 318" fill="none" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+  <text x="226" y="302" font-size="9" font-weight="bold" fill="#1f5f8b">pasa</text>
+  <path d="M 650 280 L 780 280 L 780 318" fill="none" stroke="#b3261e" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="700" y="302" font-size="9" font-weight="bold" fill="#b3261e">falla</text>
+
+  <rect x="30" y="320" width="380" height="92" rx="5" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="220" y="339" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1f5f8b">4a · Se escribe en la base de datos</text>
+  <text x="220" y="356" text-anchor="middle" font-size="8.3" fill="#5b6b78">proyecto-&gt;requerimientos()-&gt;create(...)</text>
+  <text x="220" y="371" text-anchor="middle" font-size="8.3" fill="#5b6b78">INSERT en requerimientos con el tipo deducido</text>
+  <text x="220" y="386" text-anchor="middle" font-size="8.3" fill="#5b6b78">la FK proyecto_id garantiza que el proyecto existe</text>
+  <text x="220" y="403" text-anchor="middle" font-size="8.3" fill="#1b6b43">test T05 comprueba que la fila queda guardada</text>
+
+  <rect x="590" y="320" width="380" height="92" rx="5" fill="#fdecea" stroke="#b3261e" stroke-width="2"/>
+  <text x="780" y="339" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#b3261e">4b · No se escribe nada</text>
+  <text x="780" y="356" text-anchor="middle" font-size="8.3" fill="#7a1d17">Laravel lanza ValidationException antes del INSERT</text>
+  <text x="780" y="371" text-anchor="middle" font-size="8.3" fill="#7a1d17">redirect de vuelta al formulario</text>
+  <text x="780" y="386" text-anchor="middle" font-size="8.3" fill="#7a1d17">errores y old() conservan lo que estaba bien escrito</text>
+  <text x="780" y="403" text-anchor="middle" font-size="8.3" fill="#7a1d17">test T06 comprueba que la tabla sigue vacía</text>
+
+  <line x1="220" y1="412" x2="220" y2="434" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="30" y="436" width="380" height="42" rx="5" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="220" y="454" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1f5f8b">5a · redirect() a proyectos.show</text>
+  <text x="220" y="470" text-anchor="middle" font-size="8.3" fill="#5b6b78">patrón POST-Redirect-GET: recargar no repite el alta</text>
+
+  <line x1="220" y1="478" x2="220" y2="498" stroke="#1b6b43" stroke-width="2" marker-end="url(#av)"/>
+  <text x="235" y="514" font-size="9" fill="#1b6b43">6a · Nueva petición GET: la vista muestra el requisito y el mensaje de éxito</text>
+
+  <line x1="780" y1="412" x2="780" y2="462" stroke="#b3261e" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="790" y="442" font-size="8.5" fill="#b3261e">vuelve al paso 1</text>
+  <text x="780" y="482" text-anchor="middle" font-size="9" fill="#7a1d17">5b · El formulario reaparece con el motivo del rechazo</text>
+</svg>

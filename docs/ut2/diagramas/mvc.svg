@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1000" height="560" fill="#ffffff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f5f8b"/>
+    </marker>
+    <marker id="av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1b6b43"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#16222e">Figura 1 · Arquitectura de CloudForge sobre Laravel</text>
+  <text x="500" y="49" text-anchor="middle" font-size="11" fill="#5b6b78">Recorrido de una petición: en azul la ida, en verde la respuesta</text>
+
+  <!-- navegador -->
+  <rect x="30" y="80" width="150" height="58" rx="6" fill="#ffffff" stroke="#16222e" stroke-width="2"/>
+  <text x="105" y="104" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#16222e">NAVEGADOR</text>
+  <text x="105" y="122" text-anchor="middle" font-size="9" fill="#5b6b78">petición HTTP</text>
+
+  <!-- routes -->
+  <rect x="240" y="80" width="200" height="58" rx="6" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="340" y="101" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1f5f8b">ROUTE</text>
+  <text x="340" y="118" text-anchor="middle" font-size="8.5" fill="#5b6b78">routes/web.php</text>
+  <text x="340" y="131" text-anchor="middle" font-size="8.5" fill="#5b6b78">asocia URL y método con un controlador</text>
+
+  <!-- controller -->
+  <rect x="500" y="80" width="200" height="58" rx="6" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="600" y="101" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1f5f8b">CONTROLLER</text>
+  <text x="600" y="118" text-anchor="middle" font-size="8.5" fill="#5b6b78">app/Http/Controllers/</text>
+  <text x="600" y="131" text-anchor="middle" font-size="8.5" fill="#5b6b78">coordina, no calcula</text>
+
+  <!-- form request -->
+  <rect x="760" y="80" width="210" height="58" rx="6" fill="#fff6d8" stroke="#d79b00" stroke-width="2"/>
+  <text x="865" y="101" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8a6d00">FORM REQUEST</text>
+  <text x="865" y="118" text-anchor="middle" font-size="8.5" fill="#6b5500">app/Http/Requests/</text>
+  <text x="865" y="131" text-anchor="middle" font-size="8.5" fill="#6b5500">valida en el servidor</text>
+
+  <!-- services -->
+  <rect x="500" y="200" width="470" height="120" rx="6" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="735" y="222" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1f5f8b">SERVICIOS · lógica de negocio</text>
+  <rect x="516" y="234" width="140" height="70" rx="4" fill="#ffffff" stroke="#9ec7e2"/>
+  <text x="586" y="252" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#16222e">CalculadoraPrecios</text>
+  <text x="586" y="268" text-anchor="middle" font-size="8" fill="#5b6b78">tres modalidades</text>
+  <text x="586" y="281" text-anchor="middle" font-size="8" fill="#5b6b78">importes en céntimos</text>
+  <text x="586" y="296" text-anchor="middle" font-size="8" fill="#1b6b43">sin Eloquent</text>
+  <rect x="668" y="234" width="140" height="70" rx="4" fill="#ffffff" stroke="#9ec7e2"/>
+  <text x="738" y="252" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#16222e">MotorReglas</text>
+  <text x="738" y="268" text-anchor="middle" font-size="8" fill="#5b6b78">R01–R04 bloquean</text>
+  <text x="738" y="281" text-anchor="middle" font-size="8" fill="#5b6b78">R05–R06 avisan</text>
+  <text x="738" y="296" text-anchor="middle" font-size="8" fill="#1b6b43">sin Eloquent</text>
+  <rect x="820" y="234" width="135" height="70" rx="4" fill="#ffffff" stroke="#9ec7e2"/>
+  <text x="887" y="252" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#16222e">Emisor</text>
+  <text x="887" y="265" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#16222e">Presupuestos</text>
+  <text x="887" y="281" text-anchor="middle" font-size="8" fill="#5b6b78">transacción</text>
+  <text x="887" y="294" text-anchor="middle" font-size="8" fill="#5b6b78">copia histórica</text>
+
+  <!-- models -->
+  <rect x="240" y="200" width="200" height="120" rx="6" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="340" y="222" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1f5f8b">MODELOS ELOQUENT</text>
+  <text x="340" y="243" text-anchor="middle" font-size="8.5" fill="#5b6b78">app/Models/ · 13 modelos</text>
+  <text x="340" y="260" text-anchor="middle" font-size="8.5" fill="#5b6b78">relaciones 1:N y N:M</text>
+  <text x="340" y="277" text-anchor="middle" font-size="8.5" fill="#5b6b78">filtros reutilizables (scopes)</text>
+  <text x="340" y="294" text-anchor="middle" font-size="8.5" fill="#5b6b78">casts a Enum y a JSON</text>
+  <text x="340" y="311" text-anchor="middle" font-size="8.5" fill="#5b6b78">$fillable frente a asignación masiva</text>
+
+  <!-- BD -->
+  <rect x="30" y="200" width="150" height="120" rx="6" fill="#ffffff" stroke="#16222e" stroke-width="2"/>
+  <text x="105" y="224" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#16222e">MariaDB</text>
+  <text x="105" y="245" text-anchor="middle" font-size="8.5" fill="#5b6b78">14 tablas</text>
+  <text x="105" y="262" text-anchor="middle" font-size="8.5" fill="#5b6b78">claves primarias</text>
+  <text x="105" y="277" text-anchor="middle" font-size="8.5" fill="#5b6b78">y foráneas</text>
+  <text x="105" y="296" text-anchor="middle" font-size="8.5" fill="#5b6b78">índices en los</text>
+  <text x="105" y="309" text-anchor="middle" font-size="8.5" fill="#5b6b78">filtros habituales</text>
+
+  <!-- blade -->
+  <rect x="240" y="395" width="460" height="78" rx="6" fill="#eef4f9" stroke="#1f5f8b" stroke-width="2"/>
+  <text x="470" y="418" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1f5f8b">VISTAS BLADE</text>
+  <text x="470" y="437" text-anchor="middle" font-size="8.5" fill="#5b6b78">resources/views/ · 17 plantillas y 3 componentes reutilizables</text>
+  <text x="470" y="452" text-anchor="middle" font-size="8.5" fill="#5b6b78">sólo presentan datos ya calculados · escape automático con llaves dobles</text>
+  <text x="470" y="467" text-anchor="middle" font-size="8.5" fill="#b3261e">ninguna consulta a la base de datos ni cálculo de precios</text>
+
+  <!-- flechas ida -->
+  <line x1="180" y1="109" x2="234" y2="109" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="440" y1="109" x2="494" y2="109" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="700" y1="109" x2="754" y2="109" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="865" y1="138" x2="865" y2="194" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="500" y1="260" x2="446" y2="260" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="240" y1="260" x2="186" y2="260" stroke="#1f5f8b" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- vuelta -->
+  <line x1="600" y1="320" x2="600" y2="389" stroke="#1b6b43" stroke-width="2" marker-end="url(#av)"/>
+  <text x="610" y="358" font-size="8.5" fill="#1b6b43">datos ya calculados</text>
+  <path d="M 240 434 L 105 434 L 105 144" fill="none" stroke="#1b6b43" stroke-width="2" marker-end="url(#av)"/>
+  <text x="112" y="390" font-size="8.5" fill="#1b6b43">HTML de respuesta</text>
+
+  <text x="220" y="104" text-anchor="end" font-size="8.5" fill="#5b6b78">GET / POST</text>
+  <text x="890" y="170" font-size="8.5" fill="#8a6d00">si falla, vuelve al formulario</text>
+
+  <!-- leyenda -->
+  <rect x="30" y="500" width="940" height="42" rx="5" fill="#f7fafc" stroke="#d4dde4"/>
+  <text x="46" y="518" font-size="10" font-weight="bold" fill="#1f5f8b">Dónde vive cada cosa</text>
+  <text x="46" y="533" font-size="8.5" fill="#16222e">Las rutas sólo asocian · los controladores coordinan · los servicios deciden · los modelos acceden a los datos · Blade sólo muestra</text>
+</svg>
