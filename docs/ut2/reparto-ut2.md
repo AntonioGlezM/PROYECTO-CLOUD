@@ -3,25 +3,19 @@
 Cuatro personas, cuatro bloques. Cada uno sube **sus** archivos desde **su**
 cuenta de GitHub, en **su** rama, y abre un Pull Request a `develop`.
 
-Esto no es burocracia: en la corrección de UT1 el profesorado avisó dos veces
-de que faltaba demostrar con el historial que todos habíamos aportado. En UT2
-eso vale 0,40 puntos en la Parte A, 0,60 en la memoria y **2,00 en la defensa
-individual**, donde a cada uno se le pedirá localizar, explicar o modificar
-código delante del profesor.
-
 ---
 
 ## Orden de integración
 
 El bloque de Alejandro (migraciones y modelos) es la base de todo lo demás.
 Conviene que su Pull Request se revise y se integre primero; los otros tres
-pueden trabajar en paralelo desde ya.
+podemos trabajar en paralelo.
 
 ---
 
 ## Antonio · rama `feature/ut2-catalogo`
 
-**Archivos que subes**
+**Archivos**
 
     routes/web.php
     app/Http/Controllers/InicioController.php
@@ -48,7 +42,7 @@ el catálogo se puede filtrar por nombre, tipo, proveedor y región.
 
 ## Alejandro · rama `feature/ut2-modelo-datos`
 
-**Archivos que subes**
+**Archivos**
 
     database/migrations/              (las 14)
     app/Models/                       (los 13)
@@ -70,7 +64,7 @@ sin errores y `php artisan test --filter=PresupuestoTest` pasa en verde.
 
 ## Yassine · rama `feature/ut2-proyectos-requisitos`
 
-**Archivos que subes**
+**Archivos**
 
     app/Http/Controllers/ProyectoController.php
     app/Http/Controllers/RequerimientoController.php
@@ -97,7 +91,7 @@ al carrito.
 Este bloque es el corazón de la aplicación y es el que está probado con más
 detalle: 13 comprobaciones de precios y 23 de reglas.
 
-**Archivos que subes**
+**Archivos**
 
     app/Enums/Modalidad.php
     app/Enums/Severidad.php
