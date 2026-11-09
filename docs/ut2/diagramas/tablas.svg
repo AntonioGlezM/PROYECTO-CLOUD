@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 615" width="1040" height="615" font-family="Helvetica, Arial, sans-serif">
+<rect width="1040" height="615" fill="#ffffff"/>
+<text x="520" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#16222e">Figura 6 · Tablas implementadas en la base de datos</text>
+<text x="520" y="47" text-anchor="middle" font-size="11" fill="#5b6b78">Las 14 tablas creadas por las migraciones, con el tipo de cada columna</text>
+<rect x="25" y="72" width="232" height="76.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="25" y="72" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="33" y="86" font-size="9.5" font-weight="bold" fill="#ffffff">proveedores</text>
+<text x="33" y="105" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="249" y="105" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="116.5" font-size="7.6" fill="#16222e" font-weight="normal">nombre</text>
+<text x="249" y="116.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(80)</text>
+<text x="33" y="128.0" font-size="7.6" fill="#8a6d00" font-weight="normal">U codigo</text>
+<text x="249" y="128.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(20)</text>
+<text x="33" y="139.5" font-size="7.6" fill="#16222e" font-weight="normal">activo</text>
+<text x="249" y="139.5" font-size="7" text-anchor="end" fill="#5b6b78">BOOLEAN</text>
+<rect x="25" y="162.0" width="232" height="99.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="25" y="162.0" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="33" y="176.0" font-size="9.5" font-weight="bold" fill="#ffffff">proyectos</text>
+<text x="33" y="195.0" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="249" y="195.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="206.5" font-size="7.6" fill="#16222e" font-weight="normal">nombre</text>
+<text x="249" y="206.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(120)</text>
+<text x="33" y="218.0" font-size="7.6" fill="#16222e" font-weight="normal">cliente</text>
+<text x="249" y="218.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(120)</text>
+<text x="33" y="229.5" font-size="7.6" fill="#16222e" font-weight="normal">descripcion</text>
+<text x="249" y="229.5" font-size="7" text-anchor="end" fill="#5b6b78">TEXT NULL</text>
+<text x="33" y="241.0" font-size="7.6" fill="#16222e" font-weight="normal">presupuesto_max_centimos</text>
+<text x="249" y="241.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="252.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK region_preferida_id</text>
+<text x="249" y="252.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT NULL</text>
+<rect x="25" y="275.0" width="232" height="110.5" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="25" y="275.0" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="33" y="289.0" font-size="9.5" font-weight="bold" fill="#ffffff">lineas_carrito</text>
+<text x="33" y="308.0" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="249" y="308.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="319.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK proyecto_id</text>
+<text x="249" y="319.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="331.0" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK producto_id</text>
+<text x="249" y="331.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="342.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK region_id</text>
+<text x="249" y="342.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="354.0" font-size="7.6" fill="#16222e" font-weight="normal">cantidad</text>
+<text x="249" y="354.0" font-size="7" text-anchor="end" fill="#5b6b78">INT</text>
+<text x="33" y="365.5" font-size="7.6" fill="#16222e" font-weight="normal">consumo_estimado</text>
+<text x="249" y="365.5" font-size="7" text-anchor="end" fill="#5b6b78">INT NULL</text>
+<text x="33" y="377.0" font-size="7.6" fill="#16222e" font-weight="normal">configuracion</text>
+<text x="249" y="377.0" font-size="7" text-anchor="end" fill="#5b6b78">JSON NULL</text>
+<rect x="25" y="399.5" width="232" height="99.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="25" y="399.5" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="33" y="413.5" font-size="9.5" font-weight="bold" fill="#ffffff">auditoria</text>
+<text x="33" y="432.5" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="249" y="432.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="33" y="444.0" font-size="7.6" fill="#16222e" font-weight="normal">actor</text>
+<text x="249" y="444.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(80)</text>
+<text x="33" y="455.5" font-size="7.6" fill="#16222e" font-weight="normal">accion</text>
+<text x="249" y="455.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(60)</text>
+<text x="33" y="467.0" font-size="7.6" fill="#16222e" font-weight="normal">entidad</text>
+<text x="249" y="467.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(60)</text>
+<text x="33" y="478.5" font-size="7.6" fill="#16222e" font-weight="normal">entidad_id</text>
+<text x="249" y="478.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT NULL</text>
+<text x="33" y="490.0" font-size="7.6" fill="#16222e" font-weight="normal">datos</text>
+<text x="249" y="490.0" font-size="7" text-anchor="end" fill="#5b6b78">JSON NULL</text>
+<rect x="277" y="72" width="232" height="64.5" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="277" y="72" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="285" y="86" font-size="9.5" font-weight="bold" fill="#ffffff">tipos_producto</text>
+<text x="285" y="105" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="501" y="105" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="116.5" font-size="7.6" fill="#16222e" font-weight="normal">nombre</text>
+<text x="501" y="116.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(60)</text>
+<text x="285" y="128.0" font-size="7.6" fill="#8a6d00" font-weight="normal">U codigo</text>
+<text x="501" y="128.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(30)</text>
+<rect x="277" y="150.5" width="232" height="87.5" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="277" y="150.5" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="285" y="164.5" font-size="9.5" font-weight="bold" fill="#ffffff">producto_region</text>
+<text x="285" y="183.5" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="501" y="183.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="195.0" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK producto_id</text>
+<text x="501" y="195.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="206.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK region_id</text>
+<text x="501" y="206.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="218.0" font-size="7.6" fill="#16222e" font-weight="normal">disponible</text>
+<text x="501" y="218.0" font-size="7" text-anchor="end" fill="#5b6b78">BOOLEAN</text>
+<text x="285" y="229.5" font-size="7.6" fill="#16222e" font-weight="normal">tarifa_centimos</text>
+<text x="501" y="229.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT NULL</text>
+<rect x="277" y="252.0" width="232" height="110.5" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="277" y="252.0" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="285" y="266.0" font-size="9.5" font-weight="bold" fill="#ffffff">elementos_arquitectura</text>
+<text x="285" y="285.0" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="501" y="285.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="296.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK arquitectura_id</text>
+<text x="501" y="296.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="308.0" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK producto_id</text>
+<text x="501" y="308.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="319.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK region_id</text>
+<text x="501" y="319.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="331.0" font-size="7.6" fill="#16222e" font-weight="normal">cantidad</text>
+<text x="501" y="331.0" font-size="7" text-anchor="end" fill="#5b6b78">INT</text>
+<text x="285" y="342.5" font-size="7.6" fill="#16222e" font-weight="normal">consumo_estimado</text>
+<text x="501" y="342.5" font-size="7" text-anchor="end" fill="#5b6b78">INT NULL</text>
+<text x="285" y="354.0" font-size="7.6" fill="#16222e" font-weight="normal">configuracion</text>
+<text x="501" y="354.0" font-size="7" text-anchor="end" fill="#5b6b78">JSON NULL</text>
+<rect x="277" y="376.5" width="232" height="99.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="277" y="376.5" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="285" y="390.5" font-size="9.5" font-weight="bold" fill="#ffffff">ficheros</text>
+<text x="285" y="409.5" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="501" y="409.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="421.0" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK proyecto_id</text>
+<text x="501" y="421.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="285" y="432.5" font-size="7.6" fill="#16222e" font-weight="normal">nombre_original</text>
+<text x="501" y="432.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(180)</text>
+<text x="285" y="444.0" font-size="7.6" fill="#16222e" font-weight="normal">ruta</text>
+<text x="501" y="444.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(255)</text>
+<text x="285" y="455.5" font-size="7.6" fill="#16222e" font-weight="normal">mime</text>
+<text x="501" y="455.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(100)</text>
+<text x="285" y="467.0" font-size="7.6" fill="#16222e" font-weight="normal">tamano</text>
+<text x="501" y="467.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<rect x="529" y="72" width="232" height="87.5" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="529" y="72" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="537" y="86" font-size="9.5" font-weight="bold" fill="#ffffff">regiones</text>
+<text x="537" y="105" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="753" y="105" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="116.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK proveedor_id</text>
+<text x="753" y="116.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="128.0" font-size="7.6" fill="#16222e" font-weight="normal">nombre</text>
+<text x="753" y="128.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(80)</text>
+<text x="537" y="139.5" font-size="7.6" fill="#8a6d00" font-weight="normal">U codigo</text>
+<text x="753" y="139.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(30)</text>
+<text x="537" y="151.0" font-size="7.6" fill="#16222e" font-weight="normal">pais</text>
+<text x="753" y="151.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(60)</text>
+<rect x="529" y="173.5" width="232" height="122.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="529" y="173.5" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="537" y="187.5" font-size="9.5" font-weight="bold" fill="#ffffff">requerimientos</text>
+<text x="537" y="206.5" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="753" y="206.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="218.0" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK proyecto_id</text>
+<text x="753" y="218.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="229.5" font-size="7.6" fill="#16222e" font-weight="normal">clave</text>
+<text x="753" y="229.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(40)</text>
+<text x="537" y="241.0" font-size="7.6" fill="#16222e" font-weight="normal">operador</text>
+<text x="753" y="241.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(4)</text>
+<text x="537" y="252.5" font-size="7.6" fill="#16222e" font-weight="normal">valor</text>
+<text x="753" y="252.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(120)</text>
+<text x="537" y="264.0" font-size="7.6" fill="#16222e" font-weight="normal">tipo</text>
+<text x="753" y="264.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(20)</text>
+<text x="537" y="275.5" font-size="7.6" fill="#16222e" font-weight="normal">obligatorio</text>
+<text x="753" y="275.5" font-size="7" text-anchor="end" fill="#5b6b78">BOOLEAN</text>
+<text x="537" y="287.0" font-size="7.6" fill="#16222e" font-weight="normal">origen</text>
+<text x="753" y="287.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(20)</text>
+<rect x="529" y="309.5" width="232" height="122.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="529" y="309.5" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="537" y="323.5" font-size="9.5" font-weight="bold" fill="#ffffff">presupuestos</text>
+<text x="537" y="342.5" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="753" y="342.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="354.0" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK proyecto_id</text>
+<text x="753" y="354.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="365.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK arquitectura_id</text>
+<text x="753" y="365.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT NULL</text>
+<text x="537" y="377.0" font-size="7.6" fill="#8a6d00" font-weight="normal">U numero</text>
+<text x="753" y="377.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(30)</text>
+<text x="537" y="388.5" font-size="7.6" fill="#16222e" font-weight="normal">emitido_en</text>
+<text x="753" y="388.5" font-size="7" text-anchor="end" fill="#5b6b78">TIMESTAMP</text>
+<text x="537" y="400.0" font-size="7.6" fill="#16222e" font-weight="normal">total_mensual_centimos</text>
+<text x="753" y="400.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="411.5" font-size="7.6" fill="#16222e" font-weight="normal">total_unico_centimos</text>
+<text x="753" y="411.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="537" y="423.0" font-size="7.6" fill="#16222e" font-weight="normal">avisos</text>
+<text x="753" y="423.0" font-size="7" text-anchor="end" fill="#5b6b78">JSON NULL</text>
+<rect x="781" y="72" width="232" height="145.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="781" y="72" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="789" y="86" font-size="9.5" font-weight="bold" fill="#ffffff">productos</text>
+<text x="789" y="105" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="1005" y="105" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="116.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK proveedor_id</text>
+<text x="1005" y="116.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="128.0" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK tipo_producto_id</text>
+<text x="1005" y="128.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="139.5" font-size="7.6" fill="#16222e" font-weight="normal">nombre</text>
+<text x="1005" y="139.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(120)</text>
+<text x="789" y="151.0" font-size="7.6" fill="#8a6d00" font-weight="normal">U sku</text>
+<text x="1005" y="151.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(40)</text>
+<text x="789" y="162.5" font-size="7.6" fill="#16222e" font-weight="normal">modalidad</text>
+<text x="1005" y="162.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(20)</text>
+<text x="789" y="174.0" font-size="7.6" fill="#16222e" font-weight="normal">tarifa_centimos</text>
+<text x="1005" y="174.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="185.5" font-size="7.6" fill="#16222e" font-weight="normal">unidad</text>
+<text x="1005" y="185.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(30)</text>
+<text x="789" y="197.0" font-size="7.6" fill="#16222e" font-weight="normal">tope_mensual_centimos</text>
+<text x="1005" y="197.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT NULL</text>
+<text x="789" y="208.5" font-size="7.6" fill="#16222e" font-weight="normal">activo</text>
+<text x="1005" y="208.5" font-size="7" text-anchor="end" fill="#5b6b78">BOOLEAN</text>
+<rect x="781" y="231.0" width="232" height="99.0" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="781" y="231.0" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="789" y="245.0" font-size="9.5" font-weight="bold" fill="#ffffff">arquitecturas</text>
+<text x="789" y="264.0" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="1005" y="264.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="275.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK proyecto_id</text>
+<text x="1005" y="275.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="287.0" font-size="7.6" fill="#16222e" font-weight="normal">nombre</text>
+<text x="1005" y="287.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(120)</text>
+<text x="789" y="298.5" font-size="7.6" fill="#16222e" font-weight="normal">version</text>
+<text x="1005" y="298.5" font-size="7" text-anchor="end" fill="#5b6b78">INT</text>
+<text x="789" y="310.0" font-size="7.6" fill="#16222e" font-weight="normal">estado</text>
+<text x="1005" y="310.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(20)</text>
+<text x="789" y="321.5" font-size="7.6" fill="#16222e" font-weight="normal">motivo_rechazo</text>
+<text x="1005" y="321.5" font-size="7" text-anchor="end" fill="#5b6b78">TEXT NULL</text>
+<rect x="781" y="344.0" width="232" height="179.5" rx="4" fill="#ffffff" stroke="#1f5f8b" stroke-width="1.5"/>
+<rect x="781" y="344.0" width="232" height="20" rx="4" fill="#1f5f8b"/>
+<text x="789" y="358.0" font-size="9.5" font-weight="bold" fill="#ffffff">lineas_presupuesto</text>
+<text x="789" y="377.0" font-size="7.6" fill="#b3261e" font-weight="bold">PK id</text>
+<text x="1005" y="377.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="388.5" font-size="7.6" fill="#1f5f8b" font-weight="bold">FK presupuesto_id</text>
+<text x="1005" y="388.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="400.0" font-size="7.6" fill="#16222e" font-weight="normal">producto_id_original</text>
+<text x="1005" y="400.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT NULL</text>
+<text x="789" y="411.5" font-size="7.6" fill="#16222e" font-weight="normal">producto_nombre</text>
+<text x="1005" y="411.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(120)</text>
+<text x="789" y="423.0" font-size="7.6" fill="#16222e" font-weight="normal">producto_sku</text>
+<text x="1005" y="423.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(40)</text>
+<text x="789" y="434.5" font-size="7.6" fill="#16222e" font-weight="normal">tipo_nombre</text>
+<text x="1005" y="434.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(60)</text>
+<text x="789" y="446.0" font-size="7.6" fill="#16222e" font-weight="normal">proveedor_nombre</text>
+<text x="1005" y="446.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(80)</text>
+<text x="789" y="457.5" font-size="7.6" fill="#16222e" font-weight="normal">region_nombre</text>
+<text x="1005" y="457.5" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(80)</text>
+<text x="789" y="469.0" font-size="7.6" fill="#16222e" font-weight="normal">modalidad</text>
+<text x="1005" y="469.0" font-size="7" text-anchor="end" fill="#5b6b78">VARCHAR(20)</text>
+<text x="789" y="480.5" font-size="7.6" fill="#16222e" font-weight="normal">cantidad</text>
+<text x="1005" y="480.5" font-size="7" text-anchor="end" fill="#5b6b78">INT</text>
+<text x="789" y="492.0" font-size="7.6" fill="#16222e" font-weight="normal">tarifa_centimos</text>
+<text x="1005" y="492.0" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="503.5" font-size="7.6" fill="#16222e" font-weight="normal">importe_centimos</text>
+<text x="1005" y="503.5" font-size="7" text-anchor="end" fill="#5b6b78">BIGINT</text>
+<text x="789" y="515.0" font-size="7.6" fill="#16222e" font-weight="normal">recurrente</text>
+<text x="1005" y="515.0" font-size="7" text-anchor="end" fill="#5b6b78">BOOLEAN</text>
+<rect x="25" y="553" width="988" height="46" rx="5" fill="#f7fafc" stroke="#d4dde4"/>
+<text x="41" y="571" font-size="9.5" font-weight="bold" fill="#1f5f8b">Leyenda</text>
+<text x="41" y="587" font-size="8.3" fill="#b3261e">PK clave primaria</text>
+<text x="175" y="587" font-size="8.3" fill="#1f5f8b">FK clave foránea</text>
+<text x="310" y="587" font-size="8.3" fill="#8a6d00">U índice único</text>
+<text x="430" y="587" font-size="8.3" fill="#5b6b78">Se omiten created_at y updated_at, presentes en todas las tablas salvo donde se indique.</text>
+</svg>
