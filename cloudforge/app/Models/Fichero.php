@@ -10,6 +10,8 @@ class Fichero extends Model
 {
     use HasFactory;
 
+    protected $table = 'ficheros';
+
     protected $fillable = ['proyecto_id', 'nombre_original', 'ruta', 'mime', 'tamano'];
 
     protected function casts(): array
