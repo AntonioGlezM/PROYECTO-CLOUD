@@ -20,7 +20,13 @@ Repositorio: https://github.com/AntonioGlezM/PROYECTO-CLOUD
 | Node y npm | v24.22.0 / 11.19.1 (opcional, ver nota) |
 
 Extensiones de PHP necesarias: mbstring, xml, curl, zip, gd, intl, pdo_mysql,
-fileinfo, tokenizer.
+fileinfo, tokenizer y **sqlite3**.
+
+> **Por qué sqlite3.** La aplicación funciona sobre MariaDB y no la necesita para
+> arrancar, pero las pruebas automáticas corren sobre SQLite en memoria. Sin esa
+> extensión, `php artisan test` falla con `could not find driver (Connection:
+> sqlite)` aunque todo lo demás esté bien instalado. En Ubuntu se instala con
+> `sudo apt install -y php-sqlite3` y se comprueba con `php -m | grep -i sqlite`.
 
 > **Nota sobre Node.** La interfaz de UT2 no usa JavaScript ni Vite: los
 > estilos van en la plantilla y los formularios dinámicos se resuelven en el
@@ -79,6 +85,11 @@ php artisan test
 Las pruebas usan SQLite en memoria (configurado en `phpunit.xml`), así que no
 tocan la base de datos de desarrollo. Los ficheros se prueban con
 `Storage::fake()`, de modo que tampoco se escribe nada en disco.
+
+Esto exige la extensión **sqlite3** de PHP, que es aparte de la de MariaDB. Si
+`php artisan test` falla con `could not find driver (Connection: sqlite)`, falta
+esa extensión: `sudo apt install -y php-sqlite3`. Resultado esperado con todo
+instalado: **37 pruebas superadas y 101 comprobaciones**.
 
 | Prueba | Qué comprueba |
 |---|---|
